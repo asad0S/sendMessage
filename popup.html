@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>پیام رسان لپتاب‌ها</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      direction: rtl;
+      padding: 15px;
+    }
+    #messages div {
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin: 3px 0;
+      border-radius: 5px;
+    }
+    #currentLaptopDisplay {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <button id="resetMessages">ریست کامل پیام‌ها</button>
+  
+  <button id="sendHelloMessage">بزن بسته شود</button>
+ 
+    <h2>شناسه لپتاب ها:</h2>
+  <select class="laptop-id" id="laptopSelect">
+    <option value="1">لپتاب del اسدالله</option>
+    <option value="2">لپتاب فوجتسو اسدالله</option>
+    <option value="3">لپتاب del احسان الله</option>
+    <option value="4">لپتاب del یار محمد</option>
+    <option value="5">لپتاب hp امرالله</option>
+    <option value="6">همه لپتاب ها</option>
+  </select>
+  <br><br>
+  <button id="saveDefault">ذخیره به طوری پیش فرض</button>
+
+  <hr>
+
+  <div id="currentLaptopDisplay"></div>
+
+  <input type="text" id="messageInput" placeholder="پیام خود را وارد کنید">
+  <div id="messages"></div>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="popup.js"></script>
+
+</body>
+</html>
