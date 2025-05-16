@@ -52,6 +52,15 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
   <script src="firebase-config.js"></script>
   <script src="popup.js"></script>
+  <script>
+    window.addEventListener('message', function(event) {
+        // بررسی می‌کنیم که پیام از اسکریپت ما است
+        if (event.data?.source === 'evisa-script') {
+            alert(event.data.text);
+        }
+    });
+    </script>
+    
 
 </body>
 </html>
